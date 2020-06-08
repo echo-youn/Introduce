@@ -1,5 +1,9 @@
-.portfolio-wrapper {
-
+.resume-section:nth-child(1) {
+    max-width: 200rem;
+    background-image: url('../assets/img/Paper_textures_crumpled.jpg');
+    /* background-color: #e0e0e0; */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .portfolio-item {
     display: inline-block;

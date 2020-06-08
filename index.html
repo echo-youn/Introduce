@@ -49,7 +49,7 @@
             <!-- About-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
-                    <h1 class="mb-0">Seungjae Youn, <span class="text-primary">Echo Hertz</span></h1>
+                    <h1 class="mb-0">Seungjae Youn, <span id="typing" class="text-primary"></span></h1>
                     <div class="subheading mb-5">Live In : Suwon-si paldal-gu / E-mail : <a href="mailto:name@email.com">tmdwo0727@naver.com</a></div>
                     <p class="lead mb-5">
                         Hello, I'm Seungjae Youn from Korea. I'd like to be called Echo. Thank you for visit here. Take a look and have fun. I look forward to make good relation with you.
@@ -281,5 +281,37 @@
         <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
         <!-- github jandi api -->
         <script>new GitHubCalendar(".github-jandi", "EchoHertz");</script>
+        <script>
+            let i =0
+            let upDown = true
+            let txt = 'Echo Hertz'
+            let speed = 200
+            let curTxt = ''
+            let target = $('#typing')
+
+            function typing(){
+                if(upDown){
+                    curTxt += txt.charAt(i)
+                    target.text(curTxt) 
+                    i++
+                    setTimeout(typing, speed)
+                } else {
+                    curTxt = curTxt.substring(0, i)
+                    target.text(curTxt)
+                    i--
+                    setTimeout(typing, speed)
+                }
+
+                if(target.text().length === 0){
+                    upDown = true
+                } else if (target.text().length === txt.length){
+                    upDown = false
+                }
+                
+            }
+            $(document).ready(() => {
+                typing()
+            })
+        </script>
     </body>
 </html>
