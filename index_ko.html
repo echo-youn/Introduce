@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="EchoHertz" />
-        <title>I'm seungjae</title>
+        <title>안녕하세요 윤승재입니다</title>
         <!-- github jandi drawer -->
         <link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css" />
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
@@ -16,14 +16,17 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/custom.css" rel="stylesheet" />
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     </head>
     <body id="page-top">
         <!-- Side Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <select name="language" id="language" onchange="location.replace(this.value)">
-                <option value="">Language</option>
-                <option value="index">English</option>
-                <option value="index_ko" selected>한국어</option>
+                <option value="index" selected>English</option>
+                <option value="index_ko">한국어</option>
             </select>
             <a class="navbar-brand js-scroll-trigger" href="#page-top"
                 ><span class="d-block d-lg-none">Profile</span><span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="" /></span></a
@@ -44,13 +47,16 @@
             <!-- About-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
-                    <h1 class="mb-0">Seungjae Youn, <span class="text-primary">Echo Hertz</span></h1>
-                    <div class="subheading mb-5">Live In : Suwon-si paldal-gu / E-mail : <a href="mailto:name@email.com">tmdwo0727@naver.com</a></div>
+                    <h1 class="mb-0">윤승재, <span id="typing" class="text-primary"></span></h1>
+                    <div class="subheading mb-5">거주지 : 수원시 팔달구 / 이메일 : <a href="mailto:name@email.com">tmdwo0727@naver.com</a></div>
                     <p class="lead mb-5">
-                        Hello, I'm Seungjae Youn from Korea. I'd like to be called Echo. Thank you for visit here. Take a look and have fun. I look forward to make good relation with you.
+                        안녕하세요. 행복한 개발자 윤승재입니다. 제 영어 별명은 "Echo"입니다. 편하게 부르시고 싶으신대로 불러주시면 됩니다.
                     </p>
                     <p class="lead mb-5">
-                        Thank you.
+                        제 홈페이지에 방문해 주셔서 감사합니다. 둘러보시고 앞으로 좋은 인연이 되었으면 좋겠습니다.
+                    </p>
+                    <p class="lead mb-5">
+                        감사합니다.
                     </p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://github.com/EchoHertz"><i class="fab fa-github"></i></a>
@@ -65,24 +71,28 @@
                     <h2 class="mb-5">Experience</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Junior Web Developer</h3>
-                            <div class="subheading mb-3">Offshore & Land Logistics System</div>
+                            <h3 class="mb-0">주니어 웹 개발자</h3>
+                            <div class="subheading mb-3">해상 & 육상 물류 시스템</div>
                             <p>
-                                This project is to create a system that tracks the materials of importing plant materials from sea to land. The materials are essential materials for power plants to produce electricity. So we have to plan to make sure we don't run out of stock all the time, and we have to be able to predict when we'll run out of stock.
+                                이 프로젝트는 열병합 발전소의 투입 연료를 수입하는데, 그 연료를 해상부터 육상 물류까지 관리하는 시스템입니다. 앞으로 얼마나 재고가 남았는지 예측과 앞으로 국내로 들어올 가용 재고가 얼마인지 예측하는 시스템입니다.
                             </p>
                             <p>
-                                My role was front-end(100%), back-end(50%), DB(50%), infrastructure management and installation(80%), and process design(50%). I used Azure Cloud Service, Virtual Machine for WAS and Database. I managed it and handled it. And it also did database mirroring.
+                                제 역할은 프론트엔드(100%), 백엔드(50%), DB(50%), 인프라 설치 및 관리 (80%) 그리고 아키텍트(40~50%)르 담당했습니다. 그리고 마이크로소프트 사의 애저 클라우드 서비스를 이용해 오프 프레미스로 인프라를 구축하였습니다.
                             </p>
                             <p>
-                                I used Visual Studio for IDE, Csharp with .NET Framework for backend, Microsoft SQL-Server for database, Devextreme(Jquery) for UI componenet library.
+                                저는 주로 IDE로 비주얼 스튜디오와 비주얼 스튜디오 코드를 사용합니다. 그리고 지금까지는 C#, MSSQL, javascript, nodejs, vuejs, jquery를 사용해왔습니다.
                             </p>
-                            <div class="subheading mb-3">52 hour human resuource management system</div>
+                            <div class="subheading mb-3">주 52시간 관리 프로그램</div>
                             <p>
-                                It is project for managing 
+                                제 두번째 프로젝트는 52시간 관리 프로그램입니다. 
+                                This is second project for smart factory with vuejs. I used vuejs admin template. My position was a devops. I teach new members that how to use git and what is gitflow. And I tried to build CI/CD but i couldn't.
                             </p>
-                            <div class="subheading mb-3">ERP & MES with Vuex, Vue.js</div>
                             <p>
-                                This is third project for smart factory with vuejs. I used vuejs admin template. My position was a devops. I teach new members that how to use git and what is gitflow. And I tried to build CI/CD but i couldn't.
+                                As a result, This project was meaningful in learning collaboration and learning how to distribute work. This project done with failure. The project was overdue and there was a split between the team leader and the team members. Some of the team members had changed company and others had given up on the situation. Through this experience, I learned how team leader's inclination and leadership have a great impact on the success of the project.
+                            </p>
+                            <div class="subheading mb-3">ERP & MES (Vuex, Vue.js)</div>
+                            <p>
+                                This is second project for smart factory with vuejs. I used vuejs admin template. My position was a devops. I teach new members that how to use git and what is gitflow. And I tried to build CI/CD but i couldn't.
                             </p>
                             <p>
                                 As a result, This project was meaningful in learning collaboration and learning how to distribute work. This project done with failure. The project was overdue and there was a split between the team leader and the team members. Some of the team members had changed company and others had given up on the situation. Through this experience, I learned how team leader's inclination and leadership have a great impact on the success of the project.
@@ -92,7 +102,7 @@
                                 I maintained several legacy projects. Most projects are web-based and some of uses signalR(web Socket).
                             </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">June 2018 - July 2020</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">2018.06 - 2020.07</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
@@ -179,7 +189,7 @@
             </section>
             <section class="resume-section" id="Portfolio">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Portfoilo</h2>
+                    <h2 class="mb-5">Portfolio</h2>
                     <div class="mb-0">
                         <div class="portfolio-wrapper">
                             <div class="portfolio-item">
@@ -187,10 +197,10 @@
                                     <img class="col-12" src="assets/img/TLMS_LandingPage.png" alt="Portfolio">
                                 </div>
                                 <div class="col-12 portfolio-item-header">
-                                    <h3>Offshore & Land Logistics System</h4>
+                                    <h3>Offshore & Land Logistics System ( Dash Board )</h4>
                                 </div>
                                 <div class="col-12 portfoilo-item-detail">
-                                    <p>detail</p>
+                                    <p>This is landing page for this project. Users can view the status and stats of BLs. It provide information that summary of business logic. For example, Shortage Estimated Date. The feature of client's process is stock rotate very quickly. So the stock runs out in no time. So it predicts Shortage Estimated Date.</p>
                                 </div>
                             </div>
                             <div class="portfolio-item">
@@ -198,10 +208,10 @@
                                     <img class="col-12" src="assets/img/Contracts.png" alt="Portfolio">
                                 </div>
                                 <div class="col-12 portfolio-item-header">
-                                    <h3>Offshore & Land Logistics System</h4>
+                                    <h3>Offshore & Land Logistics System ( Data Grid )</h4>
                                 </div>
                                 <div class="col-12 portfoilo-item-detail">
-                                    <p>detail</p>
+                                    <p>It displays list of contracts, I use DevExtreme Component Library. It can handle almost function of grid.</p>
                                 </div>
                             </div>
                             <div class="portfolio-item">
@@ -209,10 +219,10 @@
                                     <img class="col-12" src="assets/img/Chart.png" alt="Portfolio">
                                 </div>
                                 <div class="col-12 portfolio-item-header">
-                                    <h3>Offshore & Land Logistics System</h4>
+                                    <h3>Offshore & Land Logistics System ( Chart )</h4>
                                 </div>
                                 <div class="col-12 portfoilo-item-detail">
-                                    <p>detail</p>
+                                    <p>The chart for predict data. I can handling data for chart. Also can build data structure.</p>
                                 </div>
                             </div>
                             <div class="portfolio-item">
@@ -220,10 +230,21 @@
                                     <img class="col-12" src="assets/img/WeighingAfter.png" alt="Portfolio">
                                 </div>
                                 <div class="col-12 portfolio-item-header">
-                                    <h3>Offshore & Land Logistics System</h4>
+                                    <h3>Offshore & Land Logistics System ( Business Logic ) </h4>
                                 </div>
                                 <div class="col-12 portfoilo-item-detail">
-                                    <p>detail</p>
+                                    <p>This is for complicate business logic. Shortcut make more web to application.</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-image">
+                                    <img class="col-12" src="assets/img/working.jpg" alt="Portfolio">
+                                </div>
+                                <div class="col-12 portfolio-item-header">
+                                    <h3>Human Resource Management System (52Hours)</h4>
+                                </div>
+                                <div class="col-12 portfoilo-item-detail">
+                                    <p>This project is an ERP module can manage the working hour, vacation and worker's working hour. The client's major type of rabor is flexible work system. This can help managing human resource.</p>
                                 </div>
                             </div>
                             <div class="portfolio-item">
@@ -234,7 +255,7 @@
                                     <h3>Legacy Web Socket Application</h4>
                                 </div>
                                 <div class="col-12 portfoilo-item-detail">
-                                    <p>detail</p>
+                                    <p>This is monitoring system with signalR(Web Socket Library). I had additional development and maintenance.</p>
                                 </div>
                             </div>
                             <div class="portfolio-item">
@@ -245,7 +266,7 @@
                                     <h3>ERP Application with Vuejs, Nodejs</h4>
                                 </div>
                                 <div class="col-12 portfoilo-item-detail">
-                                    <p>detail</p>
+                                    <p>This project is full package ERP module except financial. It consists of production, personnel, sales, inventory and purchase. This is developed vuejs front-end framework. I take charge DevOps and PL(Project Leader)</p>
                                 </div>
                             </div>
                         </div>
@@ -269,5 +290,37 @@
         <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
         <!-- github jandi api -->
         <script>new GitHubCalendar(".github-jandi", "EchoHertz");</script>
+        <script>
+            let i =0
+            let upDown = true
+            let txt = '에코 헤르츠'
+            let speed = 200
+            let curTxt = ''
+            let target = $('#typing')
+
+            function typing(){
+                if(upDown){
+                    curTxt += txt.charAt(i)
+                    target.text(curTxt) 
+                    i++
+                    setTimeout(typing, speed)
+                } else {
+                    curTxt = curTxt.substring(0, i)
+                    target.text(curTxt)
+                    i--
+                    setTimeout(typing, speed)
+                }
+
+                if(target.text().length === 0){
+                    upDown = true
+                } else if (target.text().length === txt.length){
+                    upDown = false
+                }
+                
+            }
+            $(document).ready(() => {
+                typing()
+            })
+        </script>
     </body>
 </html>
