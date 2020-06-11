@@ -43,7 +43,7 @@ const browser = isIE();
 })(jQuery); // End of use strict
 
 function isIE(){ 
-    if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) { 
+    if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (navigator.userAgent.indexOf("msie") != -1)) { 
         // IE 일 경우
         alert('Internet Explorer에서 접속하였습니다. 원활한 이용을 원하실 경우 다른 브라우저를 이용해주세요.');
         return 'IE';
