@@ -1,4 +1,4 @@
-const browser = isBrowserCheck();
+const browser = isIE();
 /*!
     * Start Bootstrap - Resume v6.0.0 (https://startbootstrap.com/template-overviews/resume)
     * Copyright 2013-2020 Start Bootstrap
@@ -46,6 +46,6 @@ function isIE(){
     if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) { 
         // IE 일 경우
         alert('Internet Explorer에서 접속하였습니다. 원활한 이용을 원하실 경우 다른 브라우저를 이용해주세요.');
-        return;
+        return 'IE';
     }
 }
