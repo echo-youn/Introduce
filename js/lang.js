@@ -4,13 +4,17 @@ const langCode = {
     korean: 'ko',
     japan: 'ja'
 }
-
-for(let [key, value] of Object.entries(langCode)){
-    if(lang === value){
-        window.location.replace(`index_${value}`)
+if(!sessionStorage.getItem('visited')){
+    sessionStorage.setItem('visited','hello, world')
+    for(let [key, value] of Object.entries(langCode)){
+        if(lang === 'en'){
+            window.location.replace(`index.html`)
+        } else if(lang === value){
+            window.location.replace(`index_${value}.html`)
+        }
+        // Lagacy
+        // if(navigator.language.indexOf(value) >= 0){
+        //     location.href = `index_${value}`
+        // }
     }
-    // Lagacy
-    // if(navigator.language.indexOf(value) >= 0){
-    //     location.href = `index_${value}`
-    // }
 }
