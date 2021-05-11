@@ -14,9 +14,5 @@ if(!sessionStorage.getItem('visited')){
         } else if(lang === value){
             window.location.replace(`index_${value}.html`)
         }
-        // Lagacy
-        // if(navigator.language.indexOf(value) >= 0){
-        //     location.href = `index_${value}`
-        // }
     }
 }
