@@ -45,6 +45,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#certifications">Certifications</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#companies">Companies</a></li>
                     </ul>
                 </div>
             </nav>
@@ -251,6 +252,45 @@
                     <div class="col-12" id="github-jandi">Loading the data</div>
                 </section>
         </template>
+
+        <!-- companies -->
+        <template id="companiesComponent">
+            <section class="resume-section" id="companies">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Portfolio</h2>
+                    <div class="mb-0">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-image">
+                                    <a href="http://uvc.co.kr/">
+                                        <img class="col-12" src="assets/img/uvc_logo_nav.jpg" alt="Portfolio">
+                                    </a>
+                                </div>
+                                <div class="col-12 portfolio-item-header">
+                                    <h3>{{ this.$store.getters.l('companiesTitle1') }}</h3>
+                                </div>
+                                <div class="col-12 portfoilo-item-detail">
+                                    <p>{{ this.$store.getters.l('companiesContent1') }}</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-image">
+                                    <a href="https://kakaogamescorp.com" alt="카카오게임즈">
+                                        <img class="col-12" src="assets/img/kakaogames_logo.jpg" alt="kakaogames" >
+                                    </a>
+                                </div>
+                                <div class="col-12 portfolio-item-header">
+                                    <h3>{{ this.$store.getters.l('companiesTitle2') }}</h3>
+                                </div>
+                                <div class="col-12 portfoilo-item-detail">
+                                    <p>{{ this.$store.getters.l('companiesContent2') }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
         
         <template id="contentComponent">
             <div class="container-fluid p-0">
@@ -267,6 +307,8 @@
                 <portfolio></portfolio>
                 <hr class="m-0" />
                 <jandi></jandi>
+                <hr class="m-0" />
+                <companies></companies>
             </div>
         </template>
        
@@ -381,6 +423,11 @@
             name: 'jandi',
             component: { 
                 template: '#jandiComponent'
+            }
+        }, {
+            name: 'companies',
+            component: { 
+                template: '#companiesComponent'
             }
         }]
 

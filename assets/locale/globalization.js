@@ -59,7 +59,11 @@ const locale = {
         portfolioTitle6: 'Legacy Web Socket Application',
         portfolioContent6: 'This is monitoring system with signalR(Web Socket Library). I had additional development and maintenance.',
         portfolioTitle7: 'ERP Application with Vuejs, Nodejs',
-        portfolioContent7: 'This project is full package ERP module except financial. It consists of production, personnel, sales, inventory and purchase. This is developed vuejs front-end framework. I take charge DevOps and PL(Project Leader)'
+        portfolioContent7: 'This project is full package ERP module except financial. It consists of production, personnel, sales, inventory and purchase. This is developed vuejs front-end framework. I take charge DevOps and PL(Project Leader)',
+        companiesTitle1: 'UVC',
+        companiesContent1: 'UVC aims to achieve a balance between work and life under the value of "HAPPY WORK PLACE" in order to enjoy a happy life by growing the value of its members through constant technological growth and by the belief that the happiness of its members is directly related to customer satisfaction.',
+        companiesTitle2: 'Kakaogames',
+        companiesContent2: 'A global leader in multi-platform gaming, Kakao Games (CEOs: Whon Namkoong, KyeHyun Cho) is a affiliate of Kakao specializing in games. In Korea and abroad, we provide games across a wide range of genres and platforms, including PC, mobile, and VR. Kakao Games will continue to secure a diverse range of IP and content as both a game publisher and developer. By refining our internal development capabilities and through partnerships with leading game companies in Korea and around the world, we will lead the way in the global game industry.'
     },
     ko: {
         headerTitle: '안녕하세요. 윤승재입니다.',
@@ -144,6 +148,10 @@ const locale = {
         portfolioTitle6: '레거시 웹 소켓 어플리케이션',
         portfolioContent6: '모니터링 시스템 및 다양한 서비스를 유지보수 및 추가 개발하였습니다.',
         portfolioTitle7: 'ERP 어플리케이션 ( Vuex, Vuejs )',
-        portfolioContent7: ' 이 프로젝트는 회계를 뺸 풀패키지 ERP 모듈입니다. 생산, 인사, 판매, 재고, 구매 모듈을 제공하였으며, 이는 vuejs 프론트엔드 프레임웍을 활용하였고 API 서버는 nodejs(Express)로 구축되었습니다. DB는 Microsoft SQL SERVER로, Azure VM에서 구동하고 있습니다. 이 프로젝트에서는 PL역할을 담당하였습니다.'
+        portfolioContent7: ' 이 프로젝트는 회계를 뺸 풀패키지 ERP 모듈입니다. 생산, 인사, 판매, 재고, 구매 모듈을 제공하였으며, 이는 vuejs 프론트엔드 프레임웍을 활용하였고 API 서버는 nodejs(Express)로 구축되었습니다. DB는 Microsoft SQL SERVER로, Azure VM에서 구동하고 있습니다. 이 프로젝트에서는 PL역할을 담당하였습니다.',
+        companiesTitle1: '(주)유비씨',
+        companiesContent1: '경기도 안양시 소재의 기업으로 스마트팩토리, 국제표준 산업 프로토콜인 OPC UA를 활용하여 산업 공정에 필요한 기기와 소프트웨어를 공급하는 업체입니다. 대표적인 프로젝트로는 군장에너지(현, SGC에너지)의 열량계, 물류관리시스템, 실시간 모니터링 서비스, 인사관리시스템 등이 있다.',
+        companiesTitle2: '카카오게임즈',
+        companiesContent2: '경기도 성남시 분당구 소재의 기업으로, 글로벌 멀티플랫폼 게임 기업 (주)카카오게임즈(각자대표 남궁훈, 조계현)는 카카오의 게임 전문 계열사로서, 국내외 게임 시장에 PC와 모바일, VR 등의 플랫폼을 아우르며 다양한 장르의 게임을 서비스하고 있습니다. 카카오게임즈는 게임 퍼블리셔 및 디벨로퍼로서 다양한 IP와 콘텐츠를 확보하는 한편, 자체 게임 개발 역량과 국내외 유력 게임사들과의 파트너십을 통해 전 세계 게임 시장을 선도해 나갈 것입니다.'
     }
 }
