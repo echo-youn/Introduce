@@ -393,6 +393,9 @@
                 return {
                     language: 'en'
                 }
+            },
+            created() {
+                document.getElementsByTagName('title')[0].innerText = this.$store.getters.l('headerTitle')
             }
         })
         </script>

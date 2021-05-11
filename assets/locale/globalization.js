@@ -1,5 +1,6 @@
 const locale = {
     en: {
+        headerTitle: 'Echo-Hertz',
         name: 'SEUNGJAE YOUN',
         banner: 'ECHO HERTZ',
         liveIn: 'Live In',
@@ -61,6 +62,7 @@ const locale = {
         portfolioContent7: 'This project is full package ERP module except financial. It consists of production, personnel, sales, inventory and purchase. This is developed vuejs front-end framework. I take charge DevOps and PL(Project Leader)'
     },
     ko: {
+        headerTitle: '안녕하세요. 윤승재입니다.',
         name: '윤승재',
         banner : '에코 헤르츠',
         liveIn: '사는 곳',
