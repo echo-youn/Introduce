@@ -48,6 +48,9 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#companies">Companies</a></li>
                     </ul>
                 </div>
+                <div @click="funSetting">
+                    <i class="fa fa-setting"></i>Fun Feature
+                </div>
             </nav>
         </template>
 
@@ -310,6 +313,14 @@
                 <jandi></jandi>
                 <hr class="m-0" />
                 <companies></companies>
+                <fun-setting></fun-setting>
+            </div>
+        </template>
+
+        <!-- funSetting collapse -->
+        <template id="funSettingComponent">
+            <div class="fixed-bottom bg-secondary">
+                <h1>hi!</h1>
             </div>
         </template>
        
@@ -323,7 +334,11 @@
         const store = new Vuex.Store({
             state: {
                 language: lang,
-                locale
+                locale,
+                funSetting: {
+                    status: false,
+                    themeColor: '',
+                }
             },
             mutations: {
                 languageChange (state, payload){
@@ -350,6 +365,12 @@
                             this.$store.commit('languageChange', payload)
                         }
                     } 
+                },
+                methods: {
+                    funSetting(event, payload){
+                        console.log(event)
+                        console.log(payload)
+                    }
                 }
             }
         }, {
@@ -431,6 +452,11 @@
             name: 'companies',
             component: { 
                 template: '#companiesComponent'
+            }
+        }, {
+            name: 'funSetting',
+            component: {
+                template: '#funSettingComponent'
             }
         }]
 
