@@ -313,7 +313,7 @@
                 <jandi></jandi>
                 <hr class="m-0" />
                 <companies></companies>
-                <fun-setting></fun-setting>
+                <fun-setting v-if="funSetting.status"></fun-setting>
             </div>
         </template>
 
@@ -364,7 +364,7 @@
                         set(payload){
                             this.$store.commit('languageChange', payload)
                         }
-                    } 
+                    }
                 },
                 methods: {
                     funSetting(event, payload){
@@ -376,7 +376,10 @@
         }, {
             name: 'contentComponent',
             component: { 
-                template: '#contentComponent'
+                template: '#contentComponent',
+                computed: {
+                    funSetting() { return this.$store.state.funSetting }
+                }
             }
         }, {
             name: 'about',
