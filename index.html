@@ -25,11 +25,12 @@
         <div id="echoVueApp">
             <side-nav-component></side-nav-component>
             <content-component></content-component>
+            <fun-setting v-if="funSetting.status"></fun-setting>
         </div>
         
         <!-- Side Navigation-->
         <template id="sideNavComponent">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" :style="$store.state.funSetting.themeColor.background">
                 <select class="custom-select" name="language" id="language" v-model="language">
                     <option value="en" selected>English</option>
                     <option value="ko">한국어</option>
@@ -48,7 +49,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#companies">Companies</a></li>
                     </ul>
                 </div>
-                <div @click="funSetting">
+                <div @click="funSettingToggle" style="cursor:pointer;color: #909090;">
                     <i class="fa fa-setting"></i>Fun Feature
                 </div>
             </nav>
@@ -58,7 +59,7 @@
         <template id="aboutComponent">
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
-                    <h1 class="mb-0">{{ this.$store.getters.l('name') }}, <span class="text-primary">{{ curTxt }}</span></h1>
+                    <h1 class="mb-0">{{ this.$store.getters.l('name') }}, <span class="text-primary" :style="$store.state.funSetting.themeColor.text">{{ curTxt }}</span></h1>
                     <div class="subheading mb-5">{{ this.$store.getters.l('liveIn') }} : {{ this.$store.getters.l('address') }} / {{ this.$store.getters.l('Email') }} : <a href="mailto:name@email.com">tmdwo0727@naver.com</a></div>
                     <p class="lead mb-5" v-html="this.$store.getters.l('introduce')"></p>
                     <div class="social-icons">
@@ -80,7 +81,7 @@
                             <div class="subheading mb-3">{{ this.$store.getters.l('juniorSub') }}</div>
                             <div v-html="this.$store.getters.l('juniorContent1')"></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">June 2018 - July 2020</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" :style="$store.state.funSetting.themeColor.text">June 2018 - July 2020</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
@@ -88,7 +89,7 @@
                             <div class="subheading mb-3">One Band, One Sound</div>
                             <div v-html="this.$store.getters.l('juniorContent2')"></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">June 2018 - July 2020</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" :style="$store.state.funSetting.themeColor.text">June 2018 - July 2020</span></div>
                     </div>
                 </div>
             </section>
@@ -313,21 +314,31 @@
                 <jandi></jandi>
                 <hr class="m-0" />
                 <companies></companies>
-                <fun-setting v-if="funSetting.status"></fun-setting>
             </div>
         </template>
 
-        <!-- funSetting collapse -->
+        <!-- funSetting offCanvas -->
         <template id="funSettingComponent">
-            <div class="fixed-bottom bg-secondary">
-                <h1>hi!</h1>
+            <div class="my-offcanvas" tabindex="10000" @click.self="$store.commit('funSettingToggle')">
+                <div class="my-offcanvas-bottom">
+                    <div class="my-offcanvas-content">
+                        <div class="row">
+                            <div class="col-4">
+                                <sketch-picker v-model="colors" @input="test" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </template>
        
-        <script src="js/lib/vue.min.js"></script>
+        <!-- <script src="js/lib/vue.min.js"></script> -->
+        <script src="js/lib/vue.js"></script>
         <script src="js/lib/vuex.min.js"></script>
+        <script src="js/lib/vue-color.js"></script>
         <script src="assets/locale/globalization.js"></script>
         <script type="text/javascript">
+        var Photoshop = VueColor.Photoshop
         Vue.use(Vuex)
         const lang = navigator.language.substr(0,2) || navigator.userLanguage.substr(0,2) || 'en'
 
@@ -337,12 +348,26 @@
                 locale,
                 funSetting: {
                     status: false,
-                    themeColor: '',
+                    themeColor: {
+                        background: {
+                            backgroundColor: '#356211',
+                        },
+                        text: {
+                            color: '#356211'
+                        }
+                    }
                 }
             },
             mutations: {
                 languageChange (state, payload){
                     state.language = payload
+                },
+                funSettingToggle(state){
+                    state.funSetting.status = !state.funSetting.status
+                },
+                themeColorPick(state, payload){
+                    state.funSetting.themeColor.background.backgroundColor = payload
+                    state.funSetting.themeColor.text.color = payload
                 }
             },
             getters: {
@@ -367,19 +392,15 @@
                     }
                 },
                 methods: {
-                    funSetting(event, payload){
-                        console.log(event)
-                        console.log(payload)
+                    funSettingToggle(event){
+                         this.$store.commit('funSettingToggle')
                     }
                 }
             }
         }, {
             name: 'contentComponent',
             component: { 
-                template: '#contentComponent',
-                computed: {
-                    funSetting() { return this.$store.state.funSetting }
-                }
+                template: '#contentComponent'
             }
         }, {
             name: 'about',
@@ -459,7 +480,27 @@
         }, {
             name: 'funSetting',
             component: {
-                template: '#funSettingComponent'
+                template: '#funSettingComponent',
+                components: {
+                    'sketch-picker': VueColor.Sketch
+                },
+                data(){
+                    return {
+                        colors: {
+                            hex: '#356211',
+                            hex8: '#356211',
+                            hsl: { h: 93, s: 0.7, l: 0.23, a: 1 },
+                            hsv: { h: 150, s: 0.66, v: 0.30, a: 1 },
+                            rgba: { r: 53, g: 98, b: 17, a: 1 },
+                            a: 1
+                        }
+                    }
+                },
+                methods: {
+                    test(color){
+                        this.$store.commit('themeColorPick', color.hex)
+                    }
+                }
             }
         }]
 
@@ -469,9 +510,10 @@
             el: '#echoVueApp',
             store,
             data() {
-                return {
-                    language: 'en'
-                }
+                return {}
+            },
+            computed:{
+                funSetting() { return this.$store.state.funSetting }
             },
             created() {
                 document.getElementsByTagName('title')[0].innerText = this.$store.getters.l('headerTitle')
