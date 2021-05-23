@@ -121,6 +121,25 @@ const locale = {
     <p>
         모든 툴에는 각자의 철학과 장단점이 있었습니다. 그런데 더 중요한 것이 있었습니다. 어떤 툴을 사용하는것이 중요한게 아니라, 어떤 룰을 정해 지속적인 관리와 사용이 더 중요합니다. 툴은 단지 도구입니다. 몇몇 툴은 사용하기 쉬울 순 있지만, 그렇다고 해서 도구가 일을 효율적으로 만들어 주지는 않습니다. 따라서 규칙과 잘 사용하는 것이 더 중요합니다.
     </p>`,
+        juniorSub3: '카카오게임즈',
+        juniorContent3: `
+        <div class="subheading mb-3">레거시 프로젝트 리팩토링</div>
+        <p>
+            PC방 점주페이지 리팩토링, 결제, 관리, 등등...
+        </p>
+        <div class="subheading mb-3">KDV 조회 어드민툴 vuejs, java spring 개발</div>
+        <p>
+            KDV 조회툴 개발
+        </p>
+        <div class="subheading mb-3">PC방 과금 API JAVA 포팅</div>
+        <p>
+            KDV 조회툴 개발
+        </p>
+        <div class="subheading mb-3">PC방 CRM 개발</div>
+        <p>
+           CRM 개발, vuejs, java spring boot
+        </p>
+        `,
         summary1: '웹 어플리케이션 엔지니어',
         summary2: '애저 클라우드 아키텍쳐',
         summary3: '애자일 개발자 & 데브옵스',
