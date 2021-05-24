@@ -4,9 +4,10 @@ const locale = {
         name: 'SEUNGJAE YOUN',
         banner: 'ECHO HERTZ',
         liveIn: 'Live In',
-        address: 'Suwon-si paldal-gu',
+        address: 'sungnam-si bundang-gu',
         Email: 'E-mail',
-        introduce: `Hello, I'm Seungjae Youn from Korea. I'd like to be called Echo. Thank you for visit here. Take a look and have fun. I look forward to make good relation with you.
+        introduce: `Hello, I'm Seungjae Youn from Korea. I'd like to be called Echo. Thank you for visit here.<br>
+         Take a look and have fun. I look forward to make good relation with you.
         <br><br>
         Thank you.`,
         experience: 'experience',
@@ -37,6 +38,32 @@ const locale = {
         <p>Specific work instructions, real-time progress updates, and QA on the results are essential. And all the knowledge, wiki and so on. I think it is also important to share in the company library. I've used various tools to do this.</p>
         <b>Confluence, Jira, Trello, Slack, Notion, Monday.com, wiki, Lineworks and so on</b>
         <p>But i realize what is important. It doesn't matter what tools use. The matter is practiced with the rule. Make the rule and keep using it is more important. Tools are just tools. Maybe some tools easier to use. But it doesn't matter that how we can work efficiently. Then, the rule and follower is more important.</p>`,
+        juniorSub3: 'Kakaogames Corp.',
+        juniorContent3: `
+        <div class="subheading mb-3">PC cafe owner's business site renewal</div>
+        <p>
+        C# has several web frameworks, among which it was created with ASP.NET (Web Form), which was used a long time ago, and was introduced as a new development staff that can use the framework. Committed to server development and updated. Because it is a B2B service, it was important to understand the business logic, and through this project, I learned new experiences and learning about PC room payment and billing logic.
+        </p>
+        <div class="subheading mb-3">Post Search Admin Tool</div>
+        <p>
+            We have developed an application that integrates and searches bulletin board data for games served by Kakao Games. The project was developed with Vuejs, Java Spring boot, and mysql. The frontend was developed by using Bootstrap-based components using in-house. In the backend, the API was written using JPA.
+        </p>
+        <p>
+            This project's purpose is to search posts, comments on posts, and comments on comments, and I had to be able to view images on result. In addition, the Excel Export function is implemented using Eceljs, an external library, to using image blobs on memory and then export them.
+        </p>
+        <div class="subheading mb-3">PC cafe billing API from C# to Java porting</div>
+        <p>
+            I proceeded to port the API developed in C# to Java Spring. The server environment was configured with an in-house template, so I couldn't directly set it, but I learned a lot of Java Spring Boot by developing on it. I had an interesting experience by comparing Annotation and C#'s Attribute, package and namespace, etc.
+        </p>
+        <div class="subheading mb-3">PC cafe admin tool from C# to Java porting</div>
+        <p>
+        I ported the admin tool developed in C# to Vuejs and Java Spring Boot.
+        </p>
+        <div class="subheading mb-3">PC cafe owner's site from C# to Java porting</div>
+        <p>
+        Porting the store owner site developed with C# ASP.NET WebForm to Java's Spring boot. In this process, the project structure was redesigned by porting the project worked with WebForm to Spring boot of MVC pattern.
+        </p>
+        `,
         summary1: 'Software Engineer based on Web',
         summary2: 'Microsoft Azure Cloud Achitecture',
         summary3: 'Agile Development & DevOps',
@@ -60,6 +87,12 @@ const locale = {
         portfolioContent6: 'This is monitoring system with signalR(Web Socket Library). I had additional development and maintenance.',
         portfolioTitle7: 'ERP Application with Vuejs, Nodejs',
         portfolioContent7: 'This project is full package ERP module except financial. It consists of production, personnel, sales, inventory and purchase. This is developed vuejs front-end framework. I take charge DevOps and PL(Project Leader)',
+        portfolioTitle8: "PC cafe owner's site",
+        portfolioContent8: 'Markup for this project was done by the person in charge of markup, and only backend and databinding work was done.',
+        portfolioTitle9: 'PC cafe billing API',
+        portfolioContent9: 'I proceeded to port the API developed in C# to Java Spring. This service is provided only in Json or XML without UI.',
+        portfolioTitle10: 'post search tool',
+        portfolioContent10: 'It is an application developed with Vuejs(Vuex), Java Spring boot. Excel Export function is also implemented.',
         portfolioNotice: '※ Private information and controversialables are masked in red, and the images are blurred.',
         companiesTitle1: 'UVC',
         companiesContent1: 'UVC aims to achieve a balance between work and life under the value of "HAPPY WORK PLACE" in order to enjoy a happy life by growing the value of its members through constant technological growth and by the belief that the happiness of its members is directly related to customer satisfaction.',
@@ -71,10 +104,11 @@ const locale = {
         name: '윤승재',
         banner : '에코 헤르츠',
         liveIn: '사는 곳',
-        address: '수원시 팔달구',
+        address: '성남시 분당구',
         Email: '이메일',
-        introduce: `안녕하세요. 행복한 개발자 윤승재입니다. 제 영어 별명은 "Echo"입니다. 편하게 부르시고 싶으신대로 불러주시면 됩니다.<br><br>
-        제 홈페이지에 방문해 주셔서 감사합니다. 둘러보시고 앞으로 좋은 인연이 되었으면 좋겠습니다.<br><br>
+        introduce: `안녕하세요. 웹 마스터를 꿈꾸는 개발자 윤승재입니다. 제 영어 이름은 "Echo"입니다.<br>
+        제 홈페이지에 방문해 주셔서 감사합니다. 개발자로서의 발자취와 경험들을 적어놓았습니다.
+        <br>천천히 구경하시고 다음에 어떤 발자취가 생길지 기대해 주세요!<br><br>
         감사합니다.`,
         experience: 'experience',
         junior: '주니어 웹 개발자',
@@ -123,21 +157,28 @@ const locale = {
     </p>`,
         juniorSub3: '카카오게임즈',
         juniorContent3: `
-        <div class="subheading mb-3">레거시 프로젝트 리팩토링</div>
+        <div class="subheading mb-3">PC방 점주페이지 리뉴얼</div>
         <p>
-            PC방 점주페이지 리팩토링, 결제, 관리, 등등...
+            C#은 여러 웹 프레임워크가 있는데 그 중 오래전에 쓰였던 ASP.NET (Web Form)으로 되어있어 프레임워크를 사용할 수 있는 신규 개발인력으로 투입되었습니다. 서버 개발에 투입되어 리뉴얼을 진행하였습니다. B2B 서비스이기 때문에 비지니스 로직을 이해하는 것이 중요했으며 해당 프로젝트로 PC방 결제, 과금 로직 등에 대해 새로이 경험하고 배웠습니다.
         </p>
-        <div class="subheading mb-3">KDV 조회 어드민툴 vuejs, java spring 개발</div>
+        <div class="subheading mb-3">게시글 조회 어드민툴</div>
         <p>
-            KDV 조회툴 개발
+            카카오게임즈에서 서비스하고 있는 게임들의 게시판 데이터를 통합, 조회하는 어플리케이션을 개발하였습니다. 프로젝트는 Vuejs와 Java Spring boot, mysql로 개발하였습니다. 프론트엔드는 사내에서 사용하는 Bootstrap 기반의 Component들을 사용하여 개발하였습니다. 백엔드에서는 JPA를 활용하여 API를 작성하였습니다.
         </p>
-        <div class="subheading mb-3">PC방 과금 API JAVA 포팅</div>
         <p>
-            KDV 조회툴 개발
+            게시글과 게시글에 달린 댓글, 대댓글을 조회하는것이 목적이며, 글과 댓글에 달린 이미지까지 조회할 수 있어야 했습니다. 추가로 Excel Export 기능을 외부라이브러리인 Exceljs를 활용하여 이미지 blob을 메모리에 할당 한 뒤 Export하는 기능을 구현하였습니다.
         </p>
-        <div class="subheading mb-3">PC방 CRM 개발</div>
+        <div class="subheading mb-3">PC방 과금 API C# -> Java 포팅</div>
         <p>
-           CRM 개발, vuejs, java spring boot
+            C#으로 개발되어있는 API를 Java Spring으로 포팅하는 작업을 진행했습니다. 서버 환경설정은 사내 Template으로 구성하여서 직접 설정하지는 못했지만 그 위에 개발을 함으로서 Java Spring Boot의 많은것을 배웠습니다. Annotation과 C#의 Attribute, package와 namespace 등을 비교하며, 흥미로운 경험을 했습니다.
+        </p>
+        <div class="subheading mb-3">PC방 어드민툴 C# -> Java 포팅</div>
+        <p>
+           C#으로 개발된 어드민툴을 Vuejs, Java Spring Boot로 포팅 작업을 진행했습니다.
+        </p>
+        <div class="subheading mb-3">PC방 점주페이지 C# -> Java 포팅</div>
+        <p>
+           C# ASP.NET WebForm으로 개발된 점주페이지를 Java의 Spring boot로 포팅하는 작업을 진행했습니다. 이 과정에서 WebForm으로 작업된 프로젝트를 MVC 패턴의 Spring boot로 포팅함으로서 프로젝트 구조를 다시 설계하였습니다.
         </p>
         `,
         summary1: '웹 어플리케이션 엔지니어',
@@ -169,6 +210,12 @@ const locale = {
         portfolioContent6: '모니터링 시스템 및 다양한 서비스를 유지보수 및 추가 개발하였습니다.',
         portfolioTitle7: 'ERP 어플리케이션 ( Vuex, Vuejs )',
         portfolioContent7: ' 이 프로젝트는 회계를 뺸 풀패키지 ERP 모듈입니다. 생산, 인사, 판매, 재고, 구매 모듈을 제공하였으며, 이는 vuejs 프론트엔드 프레임웍을 활용하였고 API 서버는 nodejs(Express)로 구축되었습니다. DB는 Microsoft SQL SERVER로, Azure VM에서 구동하고 있습니다. 이 프로젝트에서는 PL역할을 담당하였습니다.',
+        portfolioTitle8: 'PC방 점주페이지',
+        portfolioContent8: '이 프로젝트는 마크업은 마크업 담당자분께서 작업해주셨고, Backend 및 Databinding 작업만을 진행했습니다.',
+        portfolioTitle9: 'PC방 과금 API',
+        portfolioContent9: 'C#으로 개발되어있는 API를 Java Spring으로 포팅하는 작업을 진행했습니다. UI 없이 Json 혹은 XML으로만 제공되는 서비스입니다.',
+        portfolioTitle10: '게시글 조회 어드민툴',
+        portfolioContent10: 'Vuejs(Vuex), Java Spring boot로 개발된 어플리케이션입니다. Excel Export 기능까지 구현되어 있습니다.',
         portfolioNotice: '※개인정보, 민감정보는 빨간색으로 마스킹 되어있으며, 이미지가 블러 처리 되어 있습니다.',
         companiesTitle1: '(주)유비씨',
         companiesContent1: '경기도 안양시 소재의 기업으로 스마트팩토리, 국제표준 산업 프로토콜인 OPC UA를 활용하여 산업 공정에 필요한 기기와 소프트웨어를 공급하는 업체입니다. 대표적인 프로젝트로는 군장에너지(현, SGC에너지)의 열량계, 물류관리시스템, 실시간 모니터링 서비스, 인사관리시스템 등이 있다.',
