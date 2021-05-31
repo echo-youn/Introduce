@@ -2,4 +2,4 @@
 https://echo-hertz.com
  
 Vuejs 
-jandi...를 심자..
+jandi...를 심자.
